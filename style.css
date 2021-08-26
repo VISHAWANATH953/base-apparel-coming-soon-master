@@ -1,0 +1,158 @@
+:root {
+  --Desaturated--Red: hsl(0, 36%, 70%);
+  --Soft--Red: hsl(0, 93%, 68%);
+  --Dark--Grayish--Red: hsl(0, 6%, 24%);
+  --Linear--One: liner-gredient(
+    135deg,
+    from hsl(0, 0%, 100%),
+    to hsl(0, 100%, 98%)
+  );
+  --Linear--Two: liner-gredient(
+    135deg,
+    from hsl(0, 80%, 86%),
+    to hsl(0, 74%, 74%)
+  );
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+html {
+  font-size: 65.2%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.6rem;
+  background: url(images/bg-pattern-desktop.svg);
+}
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+main aside {
+  width: 40%;
+  height: 100%;
+}
+main .div {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column nowrap;
+  position: relative;
+  padding-left: 10rem;
+}
+main .div .hide {
+  display: none;
+}
+main .div h1 {
+  font-size: 5rem;
+  letter-spacing: 0.75rem;
+  text-transform: uppercase;
+  line-height: 5.25rem;
+  font-weight: 500;
+}
+main .div p {
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  text-align: justify;
+  padding-right: 25rem;
+}
+main .div nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-185%, -800%);
+}
+main .div .input {
+  position: relative;
+}
+main .div .input input[type="email"] {
+  margin-top: 1.5rem;
+  margin-left: 0.75rem;
+  border-radius: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  border-color: var(--Desaturated--Red);
+  width: 27.5rem;
+  outline: none;
+}
+main .div .input button {
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  z-index: 1;
+  width: 5rem;
+  padding: 1rem 3rem;
+  transform: translateY(-32%);
+  display: flex;
+  align-items: center;
+  background: var(--Soft--Red);
+  border-radius: 2.5rem;
+  justify-content: center;
+}
+main aside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pink {
+  color: var(--Desaturated--Red);
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+  main {
+    flex-flow: column nowrap;
+  }
+  main .div {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-left: 0rem;
+  }
+  main .div .hide {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+  main .div h1 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+  }
+  main .div p {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 0 2.5rem;
+  }
+  main .div nav {
+    position: relative;
+    margin-bottom: 2.5rem;
+    top: 2%;
+    left: -30%;
+    transform: inherit;
+    margin-left: 1.5rem;
+  }
+  main .div .input {
+    position: relative;
+  }
+  main .div .input input[type="email"] {
+    margin-top: 0.5rem;
+    margin-left: 0;
+    padding: 1.2rem auto;
+    width: 90vw;
+  }
+  aside img {
+    display: none;
+  }
+}
